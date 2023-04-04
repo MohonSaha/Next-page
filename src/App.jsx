@@ -1,9 +1,17 @@
-function App() {
-  return (
-    <div className='App'>
-      <h1 className="text-green-600 text-5xl">Welcome to nextPage!</h1>
-    </div>
-  )
-}
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from './components/Header/Header';
 
-export default App
+const App = () => {
+  return (
+    <div>
+      <Header/>
+
+      <Outlet></Outlet>
+
+      {/* Footer  */}
+    </div>
+  );
+};
+
+export default App;
